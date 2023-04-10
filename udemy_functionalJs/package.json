@@ -6,7 +6,9 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "test": "jest ./test"
+    "test": "jest ./test",
+    "build": "npx tsc",
+    "start": "npm run build && NODE_OPTIONS=--enable-source-maps node build/src/index.js"
   },
   "author": "",
   "license": "MIT",
