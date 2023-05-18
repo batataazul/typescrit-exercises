@@ -1,5 +1,10 @@
-// import * as fs from 'fs';
-import * as path from 'path';
+const cart = [
+  { name: 'pen', num: 10, price: 7.99, fragile: true },
+  { name: 'printer', num: 1, price: 649.5, fragile: true },
+  { name: 'notebook', num: 4, price: 27.1, fragile: false },
+  { name: 'pencil', num: 3, price: 5.82, fragile: false },
+  { name: 'scissors', num: 1, price: 19.2, fragile: true },
+];
 
 export const main = () => {
   const summ: number = sum(1)(2)(3);
@@ -8,8 +13,12 @@ export const main = () => {
   console.log(summ);
   console.log(subtraction);
   console.log(power);
-  const pth = path.join(__dirname, __filename);
-  console.log(pth);
+  console.log('---------------------');
+  const fragile = cart.filter((product) => product.fragile);
+  const totalValue = fragile.map((product) => product.num * product.price);
+  const average = totalValue.reduce((acc, value, index, array) => acc + value / array.length, 0);
+  console.log(totalValue);
+  console.log(average);
 };
 
 export const sum = (a: number) => {
