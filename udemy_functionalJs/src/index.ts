@@ -16,7 +16,7 @@ export const main = () => {
   console.log('---------------------');
   const fragile = cart.filter((product) => product.fragile);
   const totalValue = fragile.map((product) => product.num * product.price);
-  const average = totalValue.reduce((acc, value, index, array) => acc + value / array.length, 0);
+  const average = totalValue.reduce((acc, value, _index, array) => acc + value / array.length, 0);
   console.log(totalValue);
   console.log(average);
 };
