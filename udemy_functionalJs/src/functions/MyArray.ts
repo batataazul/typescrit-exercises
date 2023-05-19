@@ -26,7 +26,7 @@ export class MyArray {
     return newArray;
   }
 
-  public static myReduce<ArrayType, ReturnType>(
+  public static myReduce<ArrayType, ReturnType = ArrayType>(
     array: ArrayType[],
     fn: (
       acc: typeof initialValue,

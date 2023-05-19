@@ -39,7 +39,7 @@ describe('MyArray', () => {
     it('Should return the sum of all values', () => {
       const array = [1, 2, 3, 4, 5, 6];
       const expected = 22;
-      const result = MyArray.myReduce(array, (acc: number, value) => acc + value);
+      const result = MyArray.myReduce(array, (acc, value) => acc + value);
       expect(result).to.deep.equal(expected);
 
       array.reduce((acc, value) => acc + `${value}`, '');
@@ -64,7 +64,7 @@ describe('MyArray', () => {
     it('Should concatenate each value with itself and then with the acc without initial value', () => {
       const array = ['a', 'b', 'c'];
       const expected = 'aaabbcc';
-      const result = MyArray.myReduce(array, (acc: string, value, index, array) => acc + value + array[index]);
+      const result = MyArray.myReduce(array, (acc, value, index, array) => acc + value + array[index]);
       expect(result).to.deep.equal(expected);
     });
 
