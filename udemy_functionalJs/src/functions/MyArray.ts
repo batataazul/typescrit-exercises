@@ -29,11 +29,11 @@ export class MyArray {
   public static myReduce<ArrayType, ReturnType>(
     array: ArrayType[],
     fn: (
-      acc: ArrayType | ReturnType,
+      acc: typeof initialValue,
       value: ArrayType,
       index: number,
       array: ArrayType[],
-    ) => ArrayType | ReturnType,
+    ) => typeof acc,
     initialValue: ArrayType | ReturnType = array[0],
   ): ArrayType | ReturnType {
     let result = initialValue;

@@ -71,7 +71,7 @@ describe('MyArray', () => {
     it('Should return undefined if array is empty and no initial value is provided', () => {
       const array: number[] = [];
       const expected = undefined;
-      const result = MyArray.myReduce(array, (acc: number, value) => acc + value);
+      const result = MyArray.myReduce(array, (acc, _value) => acc);
       expect(result).to.deep.equal(expected);
     });
 
