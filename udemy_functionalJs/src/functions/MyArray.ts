@@ -35,7 +35,7 @@ export class MyArray {
       array: ArrayType[],
     ) => typeof acc,
     initialValue: ArrayType | ReturnType = array[0],
-  ): ArrayType | ReturnType {
+  ): typeof initialValue {
     let result = initialValue;
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < array.length; i++) {
